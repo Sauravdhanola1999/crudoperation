@@ -1,7 +1,9 @@
 const express = require("express");
 const bcrypt = require("bcryptjs");
+const cors = require('cors');
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 let users = [
@@ -18,7 +20,6 @@ let users = [
 ];
 
 let Authusers = [];
-
 
 //signup
 
